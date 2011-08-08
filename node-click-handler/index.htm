@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="jquery.min.js" ></script>
+		<script type="text/javascript"><!--
+			var svgns = 'http://www.w3.org/2000/svg';
+			
+			var SVGRoot = null;
+			
+			var fakeData = {
+				"root": {
+					"id": 0,
+					"visible": false,
+					"name": "все",
+					"childrens": [
+					  {
+						"id": 1,
+						"visible": false,
+						"name": "по цветам",
+						"value": 43,
+						"childrens": [
+								{
+									"id": 2,
+									"visible": false,
+									"name": "по моделям",
+									"value": 0,
+									"childrens": [
+									{
+										"id": 3,
+										"visible": false,
+										"name": "по годам",
+										"value": 0,
+										"childrens": [ ]
+									}, {
+										"id": 4,
+										"visible": false,
+										"name": "по годам",
+										"value": 0,
+										"childrens": [ ]
+									}
+									]
+								}, {
+									"id": 5,
+									"visible": false,
+									"name": "по моделям",
+									"value": 0,
+									"childrens": [
+									{
+										"id": 6,
+										"visible": false,
+										"name": "по годам",
+										"value": 0,
+										"childrens": [ ]
+									}, {
+										"id": 7,
+										"visible": false,
+										"name": "по годам",
+										"value": 0,
+										"childrens": [ ]
+									}
+									]
+								}, {
+									"id": 8,
+									"visible": false,
+									"name": "по моделям",
+									"value": 0,
+									"childrens": [
+									{
+										"id": 9,
+										"visible": false,
+										"name": "по годам",
+										"value": 0,
+										"childrens": [ ]
+									}, {
+										"id": 10,
+										"visible": false,
+										"name": "по годам",
+										"value": 0,
+										"childrens": [ ]
+									}
+									]
+								}, {
+									"id": 11,
+									"visible": false,
+									"name": "по моделям",
+									"value": 0,
+									"childrens": [
+									{
+										"id": 12,
+										"visible": false,
+										"name": "по годам",
+										"value": 0,
+										"childrens": [ ]
+									}, {
+										"id": 13,
+										"visible": false,
+										"name": "по годам",
+										"value": 0,
+										"childrens": [ ]
+									}
+									]
+								}, {
+									"id": 14,
+									"visible": false,
+									"name": "по моделям",
+									"value": 0,
+									"childrens": [
+									{
+										"id": 15,
+										"visible": false,
+										"name": "по годам",
+										"value": 0,
+										"childrens": [ ]
+									}, {
+										"id": 16,
+										"visible": false,
+										"name": "по годам",
+										"value": 0,
+										"childrens": [ ]
+									}
+									]
+								}, {
+									"id": 17,
+									"visible": false,
+									"name": "по моделям",
+									"value": 0,
+									"childrens": [
+									{
+										"id": 18,
+										"visible": false,
+										"name": "по годам",
+										"value": 0,
+										"childrens": [ ]
+									}, {
+										"id": 19,
+										"visible": false,
+										"name": "по годам",
+										"value": 0,
+										"childrens": [ ]
+									}
+									]
+								}
+							]
+					  }, {
+						"id": 20,
+						"visible": false,
+						"name": "по моделям",
+						"value": 65,
+						"childrens": []
+					  }, {
+						"id": 21,
+						"visible": false,
+						"name": "по годам",
+						"value": 25,
+						"childrens": []
+					  }
+					]
+				}
+			};
+			var data = fakeData;
+
+			var node_cnt = 0;
+			var dx = 512;
+			var dy = 384;
+			var isRoot = false;
+			
+			function doSomething(event)
+			{				
+				var node = event.target;
+				bypass(data.root, 1, 0, 360, 0, 0);
+				var id = node.id;
+				
+				function FindNodeById(n) {
+					if(n.id == id)
+					{
+						n.visible = true;
+						//alert(n.id + ' ' + id);
+					}
+					if (n.childrens.length > 0)
+					{			
+						for(var i=0, l=n.childrens.length; i<l; ++i)
+						{
+							FindNodeById(n.childrens[i]);
+						}
+					}
+				}
+				
+				FindNodeById(data.root);
+				bypass(data.root, 1, 0, 360, 0, 0);
+			}		
+
+			function CreateDot(fillColor, fillOpacity, strokeColor, strokeWidth, cx, cy, r, id)
+			{
+				var dot = document.createElementNS(svgns, 'circle');
+				dot.setAttributeNS(null, 'id', id);
+				dot.setAttributeNS(null, 'cx', cx);
+				dot.setAttributeNS(null, 'cy', cy);
+				dot.setAttributeNS(null, 'r',  r);
+				dot.setAttributeNS(null, 'fill',  fillColor);
+				dot.setAttributeNS(null,"fill-opacity", fillOpacity);
+				dot.setAttributeNS(null, 'stroke',  strokeColor);
+				dot.setAttributeNS(null, 'stroke-width',  strokeWidth);	
+				if (id != -1) 
+					dot.setAttributeNS(null, 'onclick', 'doSomething(evt)');
+				return dot;
+			};
+
+			function CreateLine(x1, y1, x2, y2)
+			{
+				var line = document.createElementNS(svgns, 'line');
+				line.setAttributeNS(null, 'x1', x1);
+				line.setAttributeNS(null, 'y1', y1);
+				line.setAttributeNS(null, 'x2', x2);
+				line.setAttributeNS(null, 'y2', y2);			
+				line.setAttributeNS(null, "style","stroke:#0071bc;stroke-width:2");
+				return line;
+			};
+
+			// Перед вызовом этой рекурсивной функции надо ставить node_cnt = 0.		
+			function count_nodes(node)
+			{
+				node_cnt++;
+				if (node.childrens.length > 0)
+				{
+				for (var j = 0; j < node.childrens.length; j++)
+				{
+					count_nodes(node.childrens[j]);
+				}
+				}
+			}
+
+			function bypass(node, D, alpha, beta, px, py) {
+				if (isRoot == true) {
+					isRoot = false;                
+						SVGRoot.appendChild(CreateDot("#0071bc", 1, "black", 3, dx, dy, 15, node.id));
+				}
+
+				var teta = alpha;
+				var Rd = 70 + (70 * D);        
+				
+				// FIX: Надо сделать отделюную функцию для рисования...
+				//SVGRoot.appendChild(CreateDot("#0071bc", 0, "#0071bc", 1, 0+dx, 0+dy, Rd, -1));
+				document.getElementById("backCircles").appendChild(CreateDot("#0071bc", 0, "#0071bc", 1, 0+dx, 0+dy, Rd, -1));
+
+				node_cnt = 0;
+				count_nodes(node);
+				var k = node_cnt;
+
+				if (node.childrens.length > 0)
+				{			
+					for(var i=0, l = node.childrens.length; i<l; ++i)
+					{
+						node_cnt = 0;
+						count_nodes(node.childrens[i]);
+						var lambda = node_cnt;
+
+						var mu = teta + ((lambda / k) * (beta - alpha));
+						var x = Rd * Math.cos( ((teta + mu) / 2) * Math.PI / 180 );
+						var y = Rd * Math.sin( ((teta + mu) / 2) * Math.PI / 180 );
+
+						if (document.getElementById(node.childrens[i].id) == null) // если элемент еще не отрисован то рисуем его
+						{
+							//SVGRoot.appendChild(CreateDot("#0071bc", 1, "black", 3, x+dx, y+dy, 15, node.childrens[i].id));
+							document.getElementById("frontCircles").appendChild(CreateDot("#0071bc", 1, "black", 3, x+dx, y+dy, 15, node.childrens[i].id));
+						}
+					
+						//SVGRoot.appendChild(CreateLine(px+dx, py+dy, x+dx, y+dy));
+						document.getElementById("backLines").appendChild(CreateLine(px+dx, py+dy, x+dx, y+dy));
+
+						if (node.childrens[i].childrens.length > 0 && node.childrens[i].visible == true)
+						{
+							bypass(node.childrens[i], D+1, teta, mu, x, y);
+						}
+						teta = mu;
+					}
+				}
+			}			
+			
+			$(document).ready(function(){
+				SVGRoot = document.getElementById("svgelem");
+				
+				isRoot = true;
+				bypass(data.root, 1, 0, 360, 0, 0);
+			});
+		//--></script>
+	</head>	
+	<body>
+		<svg id="svgelem" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+			<g id="backCircles">
+			</g>
+			<g id="backLines">
+			</g>
+			<g id="frontCircles">
+			</g>
+		</svg>
+	</body>
+</html>

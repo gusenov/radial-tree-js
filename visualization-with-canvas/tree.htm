@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Learning the basics of canvas</title>
+		<meta charset="utf-8">
+		<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var canvas = $("#myCanvas");
+				var context = canvas.get(0).getContext("2d");
+
+                function circle_node(x, y)
+                {
+                    context.lineWidth = 3;
+    				context.beginPath(); // Start the path
+    				context.arc(x, y, 15, 0, Math.PI*2, false); // Draw a circle
+    				context.closePath(); // Close the path
+                    context.fillStyle = '#0071bc';
+                    context.fill(); // Fill the path
+                    context.strokeStyle = "black";
+                    context.stroke();
+                }
+
+                function circle_r(x, y, r)
+                {
+                    context.fillStyle = '#0071bc';
+                    context.strokeStyle = "#0071bc";
+                    context.lineWidth = 1;
+    				context.beginPath(); // Start the path
+    				context.arc(x, y, r, 0, Math.PI*2, false); // Draw a circle
+    				context.closePath(); // Close the path
+                    context.stroke();
+                }
+
+                function line(x1, y1, x2, y2, w) {
+                    context.strokeStyle = "#0071bc"; //need list of available colors
+                    context.lineWidth = w;
+                    context.lineCap = 'square';
+                    context.beginPath();
+                    context.moveTo(x1, y1);
+                    context.lineTo(x2, y2);
+                    context.stroke();
+                    context.closePath();
+                }
+
+                var o = {
+                    "root": {
+                		"name": "все",
+                		"childrens": [
+                			{
+                				"name": "по цветам",
+                				"value": 43,
+                				"childrens": [
+                                    {
+                                      "name": "по моделям",
+                                      "value": 0,
+                                      "childrens": [
+                                        {
+                                          "name": "по годам",
+                                          "value": 0,
+                                          "childrens": [ ]
+                                        }, {
+                                          "name": "по годам",
+                                          "value": 0,
+                                          "childrens": [ ]
+                                        }
+                                      ]
+                                    }, {
+                                      "name": "по моделям",
+                                      "value": 0,
+                                      "childrens": [
+                                        {
+                                          "name": "по годам",
+                                          "value": 0,
+                                          "childrens": [ ]
+                                        }, {
+                                          "name": "по годам",
+                                          "value": 0,
+                                          "childrens": [ ]
+                                        }
+                                      ]
+                                    }, {
+                                      "name": "по моделям",
+                                      "value": 0,
+                                      "childrens": [
+                                        {
+                                          "name": "по годам",
+                                          "value": 0,
+                                          "childrens": [ ]
+                                        }, {
+                                          "name": "по годам",
+                                          "value": 0,
+                                          "childrens": [ ]
+                                        }
+                                      ]
+                                    }, {
+                                      "name": "по моделям",
+                                      "value": 0,
+                                      "childrens": [
+                                        {
+                                          "name": "по годам",
+                                          "value": 0,
+                                          "childrens": [ ]
+                                        }, {
+                                          "name": "по годам",
+                                          "value": 0,
+                                          "childrens": [ ]
+                                        }
+                                      ]
+                                    }, {
+                                      "name": "по моделям",
+                                      "value": 0,
+                                      "childrens": [
+                                        {
+                                          "name": "по годам",
+                                          "value": 0,
+                                          "childrens": [ ]
+                                        }, {
+                                          "name": "по годам",
+                                          "value": 0,
+                                          "childrens": [ ]
+                                        }
+                                      ]
+                                    }, {
+                                      "name": "по моделям",
+                                      "value": 0,
+                                      "childrens": [
+                                        {
+                                          "name": "по годам",
+                                          "value": 0,
+                                          "childrens": [ ]
+                                        }, {
+                                          "name": "по годам",
+                                          "value": 0,
+                                          "childrens": [ ]
+                                        }
+                                      ]
+                                    }
+                                ]
+                			}, {
+                				"name": "по моделям",
+                				"value": 65,
+                				"childrens": []
+                			}, {
+                				"name": "по годам",
+                				"value": 25,
+                				"childrens": []
+                			}
+                		]
+                	}
+                };
+
+                var node_cnt = 0;
+                function count_nodes(node)
+                {
+                  node_cnt++;
+                  if (node.childrens.length > 0)
+                  {
+                    for (var j = 0; j < node.childrens.length; j++)
+                    {
+                        count_nodes(node.childrens[j]);
+                    }
+                  }
+                }
+
+                var dx = 512;
+                var dy = 384;
+                var isRoot = false;
+                function bypass(node, D, alpha, beta, px, py) {
+                    if (isRoot == true) {
+                      isRoot = false;
+                      circle_node(dx, dy);
+                    }
+
+                    var teta = alpha;
+                    var Rd = 70 + (70 * D);
+                    circle_r(0 + dx, 0 + dy, Rd);
+
+                    node_cnt = 0;
+                    count_nodes(node);
+                    var k = node_cnt;
+
+                	if (node.childrens.length > 0)
+                	{
+                		for(var i=0, l = node.childrens.length; i<l; ++i)
+                		{
+                            node_cnt = 0;
+                            count_nodes(node.childrens[i]);
+                            var lambda = node_cnt;
+
+                            var mu = teta + ((lambda / k) * (beta - alpha));
+                            var x = Rd * Math.cos( ((teta + mu) / 2) * Math.PI / 180 );
+                            var y = Rd * Math.sin( ((teta + mu) / 2) * Math.PI / 180 );
+
+                            circle_node(x + dx, y + dy);
+
+                            line(px+dx, py+dy, x+dx, y+dy, 1);
+
+                            if (node.childrens[i].childrens.length > 0)
+                            {
+                                bypass(node.childrens[i], D+1, teta, mu, x, y);
+                            }
+                            teta = mu;
+                		}
+                	}
+                }
+
+                isRoot = true;
+                bypass(o.root, 1, 0, 360, 0, 0);
+			});
+		</script>
+	</head>
+
+<body>
+	<canvas id="myCanvas" width="1024" height="768">
+		<!-- Insert fallback content here -->
+	</canvas>
+</body>
+
+</html>

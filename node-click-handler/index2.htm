@@ -1,0 +1,646 @@
+﻿<!DOCTYPE html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="jquery.min.js" ></script>
+		<script type="text/javascript"><!--
+			var svgns = 'http://www.w3.org/2000/svg';
+			
+			var SVGRoot = null;
+			
+			var fakeData = {
+				"root": 	{
+					"id": 0,
+					"visible": false,
+					"name": "Root",
+					"value": 0,
+					"childrens": [
+						{
+						"id": 1,
+						"visible": false,
+						"name": "model",
+						"value": 0,
+						"childrens": [
+							{
+							"id": 2,
+							"visible": false,
+							"name": "color",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 3,
+								"visible": false,
+								"name": "year",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 4,
+								"visible": false,
+								"name": "year",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+				,			{
+							"id": 5,
+							"visible": false,
+							"name": "color",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 6,
+								"visible": false,
+								"name": "year",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 7,
+								"visible": false,
+								"name": "year",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+				,			{
+							"id": 8,
+							"visible": false,
+							"name": "color",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 9,
+								"visible": false,
+								"name": "year",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 10,
+								"visible": false,
+								"name": "year",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+				,			{
+							"id": 11,
+							"visible": false,
+							"name": "year",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 12,
+								"visible": false,
+								"name": "color",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 13,
+								"visible": false,
+								"name": "color",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 14,
+								"visible": false,
+								"name": "color",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+				,			{
+							"id": 15,
+							"visible": false,
+							"name": "year",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 16,
+								"visible": false,
+								"name": "color",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 17,
+								"visible": false,
+								"name": "color",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 18,
+								"visible": false,
+								"name": "color",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+						]
+						}
+				,		{
+						"id": 19,
+						"visible": false,
+						"name": "color",
+						"value": 0,
+						"childrens": [
+							{
+							"id": 20,
+							"visible": false,
+							"name": "model",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 21,
+								"visible": false,
+								"name": "year",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 22,
+								"visible": false,
+								"name": "year",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+				,			{
+							"id": 23,
+							"visible": false,
+							"name": "model",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 24,
+								"visible": false,
+								"name": "year",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 25,
+								"visible": false,
+								"name": "year",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+				,			{
+							"id": 26,
+							"visible": false,
+							"name": "year",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 27,
+								"visible": false,
+								"name": "model",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 28,
+								"visible": false,
+								"name": "model",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+				,			{
+							"id": 29,
+							"visible": false,
+							"name": "year",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 30,
+								"visible": false,
+								"name": "model",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 31,
+								"visible": false,
+								"name": "model",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+						]
+						}
+				,		{
+						"id": 32,
+						"visible": false,
+						"name": "year",
+						"value": 0,
+						"childrens": [
+							{
+							"id": 33,
+							"visible": false,
+							"name": "model",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 34,
+								"visible": false,
+								"name": "color",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 35,
+								"visible": false,
+								"name": "color",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 36,
+								"visible": false,
+								"name": "color",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+				,			{
+							"id": 37,
+							"visible": false,
+							"name": "model",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 38,
+								"visible": false,
+								"name": "color",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 39,
+								"visible": false,
+								"name": "color",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 40,
+								"visible": false,
+								"name": "color",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+				,			{
+							"id": 41,
+							"visible": false,
+							"name": "color",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 42,
+								"visible": false,
+								"name": "model",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 43,
+								"visible": false,
+								"name": "model",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+				,			{
+							"id": 44,
+							"visible": false,
+							"name": "color",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 45,
+								"visible": false,
+								"name": "model",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 46,
+								"visible": false,
+								"name": "model",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+				,			{
+							"id": 47,
+							"visible": false,
+							"name": "color",
+							"value": 0,
+							"childrens": [
+								{
+								"id": 48,
+								"visible": false,
+								"name": "model",
+								"value": 0,
+								"childrens": [
+								]
+								}
+				,				{
+								"id": 49,
+								"visible": false,
+								"name": "model",
+								"value": 0,
+								"childrens": [
+								]
+								}
+							]
+							}
+						]
+						}
+					]
+					}
+			};
+			var data = fakeData;
+
+			var node_cnt = 0;
+			var dx = 512;
+			var dy = 384;
+			var isRoot = false;
+			
+			function doSomething(event)
+			{				
+				var node = event.target;
+				var id = node.id;
+				
+				function FindNodeById(n) {
+					if(n.id == id)
+						n.visible = true;
+					if (n.childrens.length > 0)
+						for(var i=0, l=n.childrens.length; i<l; ++i)
+							FindNodeById(n.childrens[i]);
+				}
+				
+				FindNodeById(data.root);
+				bypass(data.root, 1, 0, 360, 0, 0);
+			}		
+
+			function CreateDot(fillColor, fillOpacity, strokeColor, strokeWidth, cx, cy, r, id)
+			{
+				var dot = document.createElementNS(svgns, 'circle');
+				dot.setAttributeNS(null, 'id', id);
+				dot.setAttributeNS(null, 'cx', cx);
+				dot.setAttributeNS(null, 'cy', cy);
+				dot.setAttributeNS(null, 'r',  r);
+				dot.setAttributeNS(null, 'fill',  fillColor);
+				dot.setAttributeNS(null,"fill-opacity", fillOpacity);
+				dot.setAttributeNS(null, 'stroke',  strokeColor);
+				dot.setAttributeNS(null, 'stroke-width',  strokeWidth);	
+				if (id != -1) 
+					dot.setAttributeNS(null, 'onclick', 'doSomething(evt)');		
+				return dot;
+			};
+			
+			function CreateNodeDot(fillColor, fillOpacity, strokeColor, strokeWidth, cx, cy, r, id)
+			{
+				var dot = document.createElementNS(svgns, 'circle');
+				dot.setAttributeNS(null, 'id', id);
+				dot.setAttributeNS(null, 'cx', cx);
+				dot.setAttributeNS(null, 'cy', cy);
+				dot.setAttributeNS(null, 'r',  r);
+				dot.setAttributeNS(null, 'fill',  fillColor);
+				dot.setAttributeNS(null,"fill-opacity", fillOpacity);
+				dot.setAttributeNS(null, 'stroke',  strokeColor);
+				dot.setAttributeNS(null, 'stroke-width',  strokeWidth);	
+				if (id != -1) 
+				{
+					dot.setAttributeNS(null, 'onclick', 'doSomething(evt)');
+				}			
+				return dot;
+			};			
+
+			function CreateLine(x1, y1, x2, y2)
+			{
+				var line = document.createElementNS(svgns, 'line');
+				line.setAttributeNS(null, 'x1', x1);
+				line.setAttributeNS(null, 'y1', y1);
+				line.setAttributeNS(null, 'x2', x2);
+				line.setAttributeNS(null, 'y2', y2);			
+				line.setAttributeNS(null, "style","stroke:#0071bc;stroke-width:2");
+				return line;
+			};
+
+			// Перед вызовом этой рекурсивной функции надо ставить node_cnt = 0.		
+			function count_nodes(node)
+			{
+				node_cnt++;
+				if (node.childrens.length > 0)
+				{
+				for (var j = 0; j < node.childrens.length; j++)
+				{
+					count_nodes(node.childrens[j]);
+				}
+				}
+			}
+
+			function bypass(node, D, alpha, beta, px, py) {
+				if (isRoot == true) {
+					isRoot = false;                
+						SVGRoot.appendChild(CreateNodeDot("#0071bc", 1, "black", 3, dx, dy, 15, node.id, '0,0'));
+				}
+
+				var teta = alpha;
+				var Rd = 70 + (70 * D);        
+				
+				// FIX: Надо сделать отделюную функцию для рисования...
+				//SVGRoot.appendChild(CreateDot("#0071bc", 0, "#0071bc", 1, 0+dx, 0+dy, Rd, -1));
+				document.getElementById("backCircles").appendChild(CreateDot("#0071bc", 0, "#0071bc", 1, 0+dx, 0+dy, Rd, -1));
+
+				node_cnt = 0;
+				count_nodes(node);
+				var k = node_cnt;
+
+				if (node.childrens.length > 0)
+				{			
+					for(var i=0, l = node.childrens.length; i<l; ++i)
+					{
+						node_cnt = 0;
+						count_nodes(node.childrens[i]);
+						var lambda = node_cnt;
+
+						var mu = teta + ((lambda / k) * (beta - alpha));
+						var x = Rd * Math.cos( ((teta + mu) / 2) * Math.PI / 180 );
+						var y = Rd * Math.sin( ((teta + mu) / 2) * Math.PI / 180 );
+						
+						/**/
+						node.childrens[i].ITL_theta = ((teta + mu) / 2);
+						node.childrens[i].ITL_r = Rd;
+						node.childrens[i].ITL_X = x;
+						node.childrens[i].ITL_Y = y;
+						/**/
+
+						if (document.getElementById(node.childrens[i].id) == null) // если элемент еще не отрисован то рисуем его
+						{
+							var xdx = x+dx;
+							var ydy = y+dy;
+							var d = CreateNodeDot("#0071bc", 1, "black", 3, px+dx, py+dy, 15, node.childrens[i].id);
+												
+							var a = document.createElementNS(svgns, 'animateTransform');
+							a.setAttributeNS(null, 'attributeName',  "transform");
+							a.setAttributeNS(null, 'attributeType',  "XML");
+							a.setAttributeNS(null, 'type',  "translate");
+							a.setAttributeNS(null, 'from',  '0,0');
+							a.setAttributeNS(null, 'to',  x+','+y);
+							a.setAttributeNS(null, 'dur',  "1s");
+							a.setAttributeNS(null, 'fill',  "freeze");
+							d.appendChild(a);						
+							
+							document.getElementById("frontCircles").appendChild(d);
+						}
+					
+						document.getElementById("backLines").appendChild(CreateLine(px+dx, py+dy, x+dx, y+dy));
+
+						if (node.childrens[i].childrens.length > 0 && node.childrens[i].visible == true)
+							bypass(node.childrens[i], D+1, teta, mu, x, y);
+							
+						teta = mu;
+					}					
+				}
+			}			
+			
+			$(document).ready(function(){
+				SVGRoot = document.getElementById("svgelem");
+				
+				isRoot = true;
+				bypass(data.root, 1, 0, 360, 0, 0);
+				/*TestTransitionFill(data.root);			
+				for(var j=1, u = 10; j<=u; ++j)
+				{
+					RadialTransition(data.root, j, 10);
+				}*/
+				//RadialTransition(data.root, 2, 10);
+			});
+			
+			function RadialTransition(node, s, S) {
+				var Delta = s / S;
+				
+				if (node.id == 0)
+				{
+					var x = dx;
+					var y = dy;
+					node.IME_X = x * (1 - Delta);
+					node.IME_Y = y * (1 - Delta);
+					//alert(node.IME_X + ' ' + node.IME_Y);
+				}
+
+				for(var i=0, l = node.childrens.length; i<l; ++i)
+				{
+					var Theta_1 = node.childrens[i].ITL_theta;
+					var R_1 = node.childrens[i].ITL_r;					
+
+					var Theta_2 = node.childrens[i].NEW_theta;
+					var R_2 = node.childrens[i].NEW_r;
+					//alert(Theta_2 + ' ' + R_2);
+
+					var theta = (Theta_1 * (1 - Delta)) + (Theta_2 * Delta);
+					var r = (R_1 * (1 - Delta)) + (R_2 * Delta);
+
+					node.childrens[i].IME_X = r * Math.cos( theta * Math.PI / 180 );
+					node.childrens[i].IME_Y = r * Math.sin( theta * Math.PI / 180 );
+					
+					var dot = document.getElementById(node.childrens[i].id);	
+					dot.cx.baseVal.value = node.childrens[i].IME_X + dx;
+					dot.cy.baseVal.value = node.childrens[i].IME_Y + dy;
+					//dot.setAttributeNS(null, 'cx', node.childrens[i].IME_X + dx);
+					//dot.setAttributeNS(null, 'cy', node.childrens[i].IME_Y + dy);
+					//alert(node.childrens[i].IME_X + ' ' + node.childrens[i].IME_Y);
+					
+					
+					if (node.childrens[i].childrens.length > 0 && node.childrens[i].visible == true)
+						RadialTransition(node.childrens[i], s, S);
+				}					
+			}	
+
+			function TestTransitionFill(node)
+			{
+				node.NEW_theta = node.ITL_theta;
+				node.NEW_r = node.ITL_r * 1.5;
+
+				if (node.id == 0)
+				{
+					node.NEW_X = node.ITL_X;
+					node.NEW_Y = node.ITL_Y;
+				}
+				else
+				{
+					node.NEW_X = node.NEW_r * Math.cos( node.NEW_theta * Math.PI / 180 );
+					node.NEW_Y = node.NEW_r * Math.sin( node.NEW_theta * Math.PI / 180 );
+				}
+
+				for(var i=0, l = node.childrens.length; i<l; ++i)
+				{
+					TestTransitionFill(node.childrens[i]);
+				}
+			}			
+		//--></script>
+	</head>	
+	<body>
+		<svg id="svgelem" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+			<g id="backCircles">
+			</g>
+			<g id="backLines">
+			</g>
+			<g id="frontCircles">
+			</g>
+		</svg>
+	</body>
+</html>

@@ -1,0 +1,516 @@
+﻿<?xml version='1.0' standalone='no'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20001102//EN' 'http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd'>
+
+<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	onload='Init(evt)'>
+	<script><![CDATA[
+		var svgns = 'http://www.w3.org/2000/svg';
+
+		var SVGDocument = null;
+		var SVGRoot = null;
+
+    var fakeData = {
+"root": 	{
+	"id": 0,
+	"visible": false,
+	"name": "Root",
+	"value": 0,
+	"childrens": [
+		{
+		"id": 0,
+		"visible": false,
+		"name": "model",
+		"value": 0,
+		"childrens": [
+			{
+			"id": 0,
+			"visible": false,
+			"name": "color",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "year",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "year",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+,			{
+			"id": 0,
+			"visible": false,
+			"name": "color",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "year",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "year",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+,			{
+			"id": 0,
+			"visible": false,
+			"name": "color",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "year",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "year",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+,			{
+			"id": 0,
+			"visible": false,
+			"name": "year",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "color",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "color",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "color",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+,			{
+			"id": 0,
+			"visible": false,
+			"name": "year",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "color",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "color",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "color",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+		]
+		}
+,		{
+		"id": 0,
+		"visible": false,
+		"name": "color",
+		"value": 0,
+		"childrens": [
+			{
+			"id": 0,
+			"visible": false,
+			"name": "model",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "year",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "year",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+,			{
+			"id": 0,
+			"visible": false,
+			"name": "model",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "year",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "year",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+,			{
+			"id": 0,
+			"visible": false,
+			"name": "year",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "model",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "model",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+,			{
+			"id": 0,
+			"visible": false,
+			"name": "year",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "model",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "model",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+		]
+		}
+,		{
+		"id": 0,
+		"visible": false,
+		"name": "year",
+		"value": 0,
+		"childrens": [
+			{
+			"id": 0,
+			"visible": false,
+			"name": "model",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "color",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "color",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "color",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+,			{
+			"id": 0,
+			"visible": false,
+			"name": "model",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "color",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "color",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "color",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+,			{
+			"id": 0,
+			"visible": false,
+			"name": "color",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "model",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "model",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+,			{
+			"id": 0,
+			"visible": false,
+			"name": "color",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "model",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "model",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+,			{
+			"id": 0,
+			"visible": false,
+			"name": "color",
+			"value": 0,
+			"childrens": [
+				{
+				"id": 0,
+				"visible": false,
+				"name": "model",
+				"value": 0,
+				"childrens": [
+				]
+				}
+,				{
+				"id": 0,
+				"visible": false,
+				"name": "model",
+				"value": 0,
+				"childrens": [
+				]
+				}
+			]
+			}
+		]
+		}
+	]
+	}
+}
+;
+		var data = fakeData;
+
+		var node_cnt = 0;
+		var dx = 512;
+		var dy = 384;
+		var isRoot = false;
+		
+		function doSomething(event)
+		{
+			node = event.target;
+			alert(node.id);
+		}		
+
+		function CreateDot(fillColor, fillOpacity, strokeColor, strokeWidth, cx, cy, r, id)
+		{
+			var dot = SVGDocument.createElementNS(svgns, 'circle');
+			dot.setAttributeNS(null, 'id', 'dot_' + id);
+			dot.setAttributeNS(null, 'cx', cx);
+			dot.setAttributeNS(null, 'cy', cy);
+			dot.setAttributeNS(null, 'r',  r);
+			dot.setAttributeNS(null, 'fill',  fillColor);
+			dot.setAttributeNS(null,"fill-opacity", fillOpacity);
+			dot.setAttributeNS(null, 'stroke',  strokeColor);
+			dot.setAttributeNS(null, 'stroke-width',  strokeWidth);	
+			if (id != -1) 
+				dot.setAttributeNS(null, 'onclick', 'doSomething(evt)');
+			return dot;
+		};
+
+		function CreateLine(x1, y1, x2, y2)
+		{
+			var line = SVGDocument.createElementNS(svgns, 'line');
+			line.setAttributeNS(null, 'x1', x1);
+			line.setAttributeNS(null, 'y1', y1);
+			line.setAttributeNS(null, 'x2', x2);
+			line.setAttributeNS(null, 'y2', y2);			
+			line.setAttributeNS(null, "style","stroke:#0071bc;stroke-width:2");
+			return line;
+		};
+
+		// Перед вызовом этой рекурсивной функции надо ставить node_cnt = 0.		
+		function count_nodes(node)
+		{
+			node_cnt++;
+			if (node.childrens.length > 0)
+			{
+			for (var j = 0; j < node.childrens.length; j++)
+			{
+				count_nodes(node.childrens[j]);
+			}
+			}
+		}
+
+    function bypass(node, D, alpha, beta, px, py) {
+        if (isRoot == true) {
+            isRoot = false;                
+		        SVGRoot.appendChild(CreateDot("#0071bc", 1, "black", 3, dx, dy, 15, node.id));
+        }
+
+        var teta = alpha;
+        var Rd = 70 + (70 * D);        
+	      SVGRoot.appendChild(CreateDot("#0071bc", 0, "#0071bc", 1, 0+dx, 0+dy, Rd, -1));
+
+        node_cnt = 0;
+        count_nodes(node);
+        var k = node_cnt;
+
+        if (node.childrens.length > 0)
+        {			
+            for(var i=0, l = node.childrens.length; i<l; ++i)
+            {
+                node_cnt = 0;
+                count_nodes(node.childrens[i]);
+                var lambda = node_cnt;
+
+                var mu = teta + ((lambda / k) * (beta - alpha));
+                var x = Rd * Math.cos( ((teta + mu) / 2) * Math.PI / 180 );
+                var y = Rd * Math.sin( ((teta + mu) / 2) * Math.PI / 180 );
+
+			          SVGRoot.appendChild(CreateDot("#0071bc", 1, "black", 3, x+dx, y+dy, 15, node.childrens[i].id));
+                    
+			          SVGRoot.appendChild(CreateLine(px+dx, py+dy, x+dx, y+dy));
+
+                if (node.childrens[i].childrens.length > 0)
+                {
+                    bypass(node.childrens[i], D+1, teta, mu, x, y);
+                }
+                teta = mu;
+            }
+        }
+    }
+
+		function Init(evt)
+		{
+			SVGDocument = evt.target.ownerDocument;
+			SVGRoot = SVGDocument.documentElement;
+
+			isRoot = true;
+			bypass(data.root, 1, 0, 360, 0, 0);
+		}
+	]]></script>
+</svg>
